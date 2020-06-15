@@ -35,7 +35,7 @@ $document = new \DOMDocument();
 
 if(!$document->loadHTML($html)) {
     http_response_code(500);
-    die('Malformed HTML');
+    die('Something was not right with that request. Did you fill in your postcode and house number? (like this: ?postcode=YOUR_POSTCODE&number=YOUR_HOUSE_NUMBER)');
 }
 
 $tables = $document->getElementsByTagName('table');
